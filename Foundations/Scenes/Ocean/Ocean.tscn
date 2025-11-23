@@ -5,25 +5,26 @@
 [ext_resource type="Texture2D" uid="uid://cykk2xpb4rx7g" path="res://Assets/Water.png" id="4_fyc3p"]
 [ext_resource type="Texture2D" uid="uid://bcak7ufhik0x3" path="res://Assets/Carrier.png" id="4_y20wh"]
 
-[node name="Ocean" type="Node"]
-
-[node name="Plane" type="Sprite2D" parent="."]
-position = Vector2(670, 457.00003)
-rotation = 2.8797934
-scale = Vector2(0.5, 0.5)
-texture = ExtResource("1_npita")
-
-[node name="Helicopter" type="Sprite2D" parent="."]
-position = Vector2(786, 296.00003)
-rotation = 2.8797934
-scale = Vector2(0.5, 0.5)
-texture = ExtResource("2_i4j2t")
-
-[node name="Carrier" type="Sprite2D" parent="."]
-position = Vector2(933, 383)
-rotation = -0.5235988
-texture = ExtResource("4_y20wh")
+[node name="Ocean" type="Node2D"]
+y_sort_enabled = true
 
 [node name="Water" type="Sprite2D" parent="."]
 texture = ExtResource("4_fyc3p")
 centered = false
+
+[node name="Carrier" type="Sprite2D" parent="."]
+position = Vector2(778, 392.00003)
+rotation = -0.5235988
+texture = ExtResource("4_y20wh")
+
+[node name="Plane" type="Sprite2D" parent="."]
+position = Vector2(1008.00006, 252)
+rotation = 2.3561945
+scale = Vector2(0.49999997, 0.49999997)
+texture = ExtResource("1_npita")
+
+[node name="Helicopter" type="Sprite2D" parent="."]
+position = Vector2(1021, 291)
+rotation = 2.8797934
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_i4j2t")
