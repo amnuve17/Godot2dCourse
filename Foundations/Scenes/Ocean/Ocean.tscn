@@ -14,16 +14,16 @@ texture = ExtResource("4_fyc3p")
 centered = false
 
 [node name="Carrier" type="Sprite2D" parent="."]
-position = Vector2(743, 286)
-rotation = 0.5235988
+position = Vector2(904, 459)
 texture = ExtResource("4_y20wh")
 
-[node name="Helicopter" type="Sprite2D" parent="Carrier"]
-unique_name_in_owner = true
-rotation = 1.2217305
-texture = ExtResource("2_i4j2t")
-
 [node name="Plane" type="Sprite2D" parent="."]
-position = Vector2(1025, 143.99994)
-rotation = -0.7853982
+position = Vector2(117, 131.00003)
+scale = Vector2(0.5, 0.5)
 texture = ExtResource("1_npita")
+
+[node name="Helicopter" type="Sprite2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(258, 481)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_i4j2t")
