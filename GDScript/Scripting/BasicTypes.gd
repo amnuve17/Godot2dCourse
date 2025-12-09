@@ -33,3 +33,50 @@ func _run() -> void:
 	print("My Character Health: ", myHealth, " (", type_string(typeof(myHealth)), ")");
 	print("My Character is Alive: ", myIsAlive, " (", type_string(typeof(myIsAlive)), ")");
 	
+	var rings: int = 9
+	var fellowshipSize: int = 5
+	var leftoverRings: int = rings % fellowshipSize
+	print("Leftover rings: ", leftoverRings)
+	
+	var isFellowshipFull: bool = fellowshipSize == 9
+	print("Is Fellowship Full (==)? ", isFellowshipFull)
+	
+	isFellowshipFull = fellowshipSize != 9
+	print("Is Fellowship Full (!=)? ", isFellowshipFull)
+	
+	isFellowshipFull = fellowshipSize > 4
+	print("Is Fellowship Full (>)? ", isFellowshipFull)
+
+	var rivendellLocation: Vector2 = Vector2(30, 20)
+	var mordorLocation: Vector2 = Vector2(25, 100)
+	var areTheSame: bool = rivendellLocation == mordorLocation
+	var differentPlace: bool = rivendellLocation != mordorLocation
+	var mordorBigger: bool = rivendellLocation > mordorLocation
+	
+	print("Rivendell Location: ", rivendellLocation.length())
+	print("Mordor Location: ", mordorLocation.length())
+	print("Are the same? (Vector2 ==): ", areTheSame)
+	print("Different place (Vector2 !=): ", differentPlace)
+	print("rivendellLocation > mordorLocation: ", mordorBigger)
+	
+	var ringPower: float = 0.1 + 0.2
+	var trueRing: float = 0.3
+	var isOneRing: bool = ringPower == trueRing
+	var isOneRingCorrect: bool = is_equal_approx(ringPower, trueRing)
+	
+	print("is One Ring (==): ", isOneRing)
+	print("is One Ring Correct (is_equal_approx): ", isOneRingCorrect)
+	print(ringPower)
+	print(trueRing)
+
+	# and or not
+	# && || !
+	var rohanArrives: bool = true
+	var gandalfArrives: bool = false
+	var orcsLose: bool = rohanArrives or gandalfArrives #and / not
+	print("Do the orcs lose? ", orcsLose)
+
+	var hasSword: bool = true
+	var hasShield: bool = false
+	var isReady: bool = hasSword and not hasShield
+	print("ready? ", isReady)
