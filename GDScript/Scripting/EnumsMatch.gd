@@ -7,7 +7,7 @@ enum State { IDLE, RUN, JUMP, DEAD }
 
 func IdentifyRace(theRace: Race) -> void:
 	
-	match  theRace:
+	match theRace:
 		Race.HOBBIT:
 			print("Race.HOBBIT")
 		Race.DWARF, Race.WIZARD:
