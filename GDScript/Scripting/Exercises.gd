@@ -7,7 +7,7 @@ extends EditorScript
 #[Lv.5] Aragorn (Human) - HP: 87.3
 #Chiamala con almeno 3 eroi diversi e stampane il risultato.
 
-func describeHero(name: String, race: String, level: int, health: float) -> String:
+func describe_hero(name: String, race: String, level: int, health: float) -> String:
 	return "[Lv. %d] %s (%s) - HP: %.1f" % [level, name, race, health]
 	
 	
@@ -17,7 +17,7 @@ func describeHero(name: String, race: String, level: int, health: float) -> Stri
 #"Empty room" se gold == 0 e non ci sono nemici
 #"Proceed with caution" in tutti gli altri casi
 
-func evaluateLoot(gold: int, hasKey: bool, enemiesAlive: int) -> String:
+func evaluate_loot(gold: int, hasKey: bool, enemiesAlive: int) -> String:
 	if gold > 100 and hasKey == true:
 		return "Jackpot"
 	elif enemiesAlive > 0 and gold > 50:
@@ -36,7 +36,7 @@ func evaluateLoot(gold: int, hasKey: bool, enemiesAlive: int) -> String:
 enum WeaponType {SPADA, LANCIA, ARCO, SCUDO, FRUSTA}
 var weapons: Array[WeaponType] = [WeaponType.SPADA, WeaponType.SCUDO, WeaponType.ARCO, WeaponType.FRUSTA]
 
-func getWeaponDamage(weapon: WeaponType) -> int:
+func get_weapon_damage(weapon: WeaponType) -> int:
 	var damage: int = 0
 	match weapon:
 		WeaponType.SPADA:
@@ -53,16 +53,16 @@ func getWeaponDamage(weapon: WeaponType) -> int:
 
 # Called when the script is executed (using File -> Run in Script Editor).
 func _run() -> void:
-	print(describeHero("Aragorn", "Human", 5, 87.3464))
-	print(describeHero("Dux", "Gnome", 9, 104.21))
-	print(describeHero("Rosso", "Half Elf", 19, 169))
+	print(describe_hero("Aragorn", "Human", 5, 87.3464))
+	print(describe_hero("Dux", "Gnome", 9, 104.21))
+	print(describe_hero("Rosso", "Half Elf", 19, 169))
 
-	print(evaluateLoot(150, true, 0))
-	print(evaluateLoot(60, false, 5))
-	print(evaluateLoot(0, false, 0))
-	print(evaluateLoot(45, true, 4))
+	print(evaluate_loot(150, true, 0))
+	print(evaluate_loot(60, false, 5))
+	print(evaluate_loot(0, false, 0))
+	print(evaluate_loot(45, true, 4))
 	
 	for weapon in weapons:
-		print(WeaponType.keys()[weapon], ": ", getWeaponDamage(weapon), " damage")
+		print(WeaponType.keys()[weapon], ": ", get_weapon_damage(weapon), " damage")
 	
 	
