@@ -1,4 +1,4 @@
-class_name  Hero 
+class_name Hero 
 extends Character
 
 func say_info() -> void:

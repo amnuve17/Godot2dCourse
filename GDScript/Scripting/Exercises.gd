@@ -97,7 +97,7 @@ func check_for_winner(player_hp: int, enemy_hp: int) -> void:
 
 func start_combat() -> void:
 	var player_hp: int = 100
-	var enemy_hp: int = 80
+	var enemy_hp: int = 100
 	var current_turn = 0
 	while player_hp > 0 and enemy_hp > 0:
 		var result: Array[int] = take_damage(current_turn % 2 == 0, player_hp, enemy_hp)
